@@ -6,6 +6,7 @@ import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import Notes from './components/Notes/Notes'
 import LoggedIn from './components/LoggedIn/LoggedIn'
+import Admin from './components/Admin/Admin'
 
 class App extends Component {
   render() {
@@ -17,10 +18,10 @@ class App extends Component {
             <Route path="/register" component={Register} />
             <Route path="/notes" component={Notes} />
             <Route path="/logged-in" component={LoggedIn} />
+            <Route path="/admin" component={Admin} />
 	          <Redirect from='/' to='/login'/>
           </Switch>
         </BrowserRouter>
-
       </div>
     );
   }

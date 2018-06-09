@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Register extends Component {
 	state = {
@@ -55,7 +56,10 @@ export default class Register extends Component {
 	render() {
 		return (
 			<div>
-				<h3>Register</h3>
+				<h2>Register</h2>
+
+				<h4>Already registered? <Link to={'/login'}>Login</Link></h4>
+
 				<form onSubmit={this.registerHandler}>
 					<div>
 						<input type="text" onChange={this.onUsernameChange} name={'username'} placeholder={'Username'}/>

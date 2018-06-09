@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 
 import Notes from '../Notes/Notes'
 
@@ -92,8 +93,11 @@ export default class LoggedIn extends Component {
 			];
 
 			let currentNote = this.state.currentNote;
+			let user = this.props.location.state.currentUser;
+
 
 			currentNote.id = new Date().getTime();
+			currentNote.createdBy = user.id;
 
 			newTodoData.push(currentNote);
 
@@ -126,6 +130,8 @@ export default class LoggedIn extends Component {
 			form = (
 				<div>
 					<h2>Hello, {user.username}</h2>
+
+					<Link to={'/login'}>Logout</Link>
 
 					<h3>{formTitle}</h3>
 					<form onSubmit={this.formHandler}>

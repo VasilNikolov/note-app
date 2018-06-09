@@ -48,3 +48,24 @@
   font-style: italic;
   font-weight: bold;
 }
+
+.user {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-control {
+  margin-right: 10px;
+}
+
+.user-element {
+  margin-right: 15px;
+}
+
+.user-element span {
+  font-style: italic;
+  font-weight: bold;
+}

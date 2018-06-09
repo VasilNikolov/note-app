@@ -25,10 +25,17 @@ export default class Login extends Component {
 				let currentUser = users[this.state.username];
 
 				if (currentUser.password === this.state.password) {
-					this.props.history.push({
-						pathname: '/logged-in',
-						state: { currentUser: currentUser }
-					});
+					if (currentUser.admin) {
+						this.props.history.push({
+							pathname: '/admin',
+							state: { currentUser: currentUser }
+						});
+					} else {
+						this.props.history.push({
+							pathname: '/logged-in',
+							state: { currentUser: currentUser }
+						});
+					}
 				}
 			} else {
 				alert('Password not empty!')
