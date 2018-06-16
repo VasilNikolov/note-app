@@ -27,6 +27,7 @@ export default class Notes extends PureComponent {
 							<span className={'note-element'}><span>Title: </span>{ el.title }</span>
 							<span className={'note-element'}><span>Description: </span>{ el.description }</span>
 							<span className={'note-element'}><span>Estimate: </span>{ el.estimation }</span>
+							<span className={'note-element'}><span>Status: </span>{ el.done === true ? "Done" : "Pending"}</span>
 							<span className={'note-element'} hidden={!this.props.users}><span>Owner: </span>{ owner }</span>
 						</div>
 						<div className={'note-control'}>

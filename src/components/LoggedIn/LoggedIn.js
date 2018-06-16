@@ -81,6 +81,7 @@ export default class LoggedIn extends Component {
 					name: '',
 					description: '',
 					estimate: '',
+					done: false,
 				},
 				update: false,
 			});
@@ -143,6 +144,10 @@ export default class LoggedIn extends Component {
 						</div>
 						<div style={{marginTop: '10px'}}>
 							<input type="text" onChange={this.handleInputChange} name={'estimation'} value={this.state.currentNote.estimation} placeholder={'Estimate(h)'}/>
+						</div>
+						<div style={{marginTop: '10px'}}>
+							<label htmlFor="done">Done: </label>
+							<input type="checkbox" onChange={this.handleInputChange} id="done" name={'done'} value={this.state.currentNote.done} checked={this.state.currentNote.done}/>
 						</div>
 						<div style={{marginTop: '10px'}}>
 							<input type="submit" value={'Save'}/>
